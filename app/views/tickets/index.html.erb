@@ -1,0 +1,20 @@
+<h1>Listing tickets for <%= link_to @event.name, @event %></h1>
+
+<table>
+  <tr>
+    <th>Attendee</th>
+  </tr>
+
+<% for ticket in @tickets %>
+  <tr>
+    <td><%=h ticket.attendee %></td>
+    <td><%= link_to 'Show', event_ticket_path(ticket.event, ticket) %></td>
+    <td><%= link_to 'Edit', edit_event_ticket_path(ticket.event, ticket) %></td>
+    <td><%= link_to 'Destroy', event_ticket_path(ticket.event, ticket), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ticket', new_event_ticket_path(@event) %>

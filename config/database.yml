@@ -1,0 +1,16 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  database: ticketmaster
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+test:
+  adapter: mysql
+  encoding: utf8
+  database: ticketmaster_test
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+

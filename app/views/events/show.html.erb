@@ -1,0 +1,16 @@
+<p>
+  <b>Name:</b>
+  <%=h @event.name %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%=h @event.venue %>
+</p>
+
+<p>
+  <%= link_to 'Tickets', event_tickets_path(:event_id => @event) %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

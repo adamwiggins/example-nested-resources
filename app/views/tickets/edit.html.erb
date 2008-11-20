@@ -1,0 +1,17 @@
+<h1>Editing ticket</h1>
+
+<%= error_messages_for :ticket %>
+
+<% form_for([ @event, @ticket ]) do |f| %>
+  <p>
+    <b>Attendee</b><br />
+    <%= f.text_field :attendee %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [@event, @ticket] %> |
+<%= link_to 'Back', event_tickets_path(@event) %>

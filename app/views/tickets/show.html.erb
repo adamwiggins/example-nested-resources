@@ -1,0 +1,12 @@
+<p>
+  <b>Event:</b>
+  <%=h @ticket.event.name %>
+</p>
+
+<p>
+  <b>Attendee:</b>
+  <%=h @ticket.attendee %>
+</p>
+
+<%= link_to 'Edit', edit_event_ticket_path(@event, @ticket) %> |
+<%= link_to 'Back', event_tickets_path(@event) %>
